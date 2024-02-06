@@ -69,7 +69,8 @@ public class UserController {
                     user.setLastName(newUser.getLastName());
                     user.setName(newUser.getFirstName() + " " + newUser.getLastName());
                     user.setEmail(newUser.getEmail());
-                    user.setPassword(newUser.getPassword());
+                    String encodedPassword = new BCryptPasswordEncoder().encode(newUser.getPassword());
+                    user.setPassword(encodedPassword);
                     user.setPhoneNumber(newUser.getPhoneNumber());
                     user.setAge(newUser.getAge());
                     user.setSexType(newUser.getSexType());
