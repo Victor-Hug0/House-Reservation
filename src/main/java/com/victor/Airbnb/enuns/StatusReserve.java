@@ -2,6 +2,5 @@ package com.victor.Airbnb.enuns;
 
 public enum StatusReserve {
     COMPLETED,
-    IN_PROGRESS,
-    CANCELED
+    IN_PROGRESS
 }

@@ -73,6 +73,13 @@ public class HouseController {
         house.setPool(houseRequestDTO.pool());
         house.setJacuzzi(houseRequestDTO.jacuzzi());
         house.setAddress(address);
+        house.setGym(houseRequestDTO.gym());
+        house.setCradle(houseRequestDTO.cradle());
+        house.setKingBed(houseRequestDTO.kingBed());
+        house.setGrill(houseRequestDTO.grill());
+        house.setEletricCarCharger(houseRequestDTO.eletricCarCharger());
+        house.setWashingMachine(houseRequestDTO.washingMachine());
+        house.setSeaSide(houseRequestDTO.seaSide());
 
         House savedHouse = houseRepository.save(house);
 
@@ -103,6 +110,13 @@ public class HouseController {
                     house.setJacuzzi(newHouse.getJacuzzi());
                     house.setAddress(newHouse.getAddress());
                     house.setReserveList(newHouse.getReserveList());
+                    house.setGym(newHouse.getGym());
+                    house.setCradle(newHouse.getCradle());
+                    house.setKingBed(newHouse.getKingBed());
+                    house.setGrill(newHouse.getGrill());
+                    house.setEletricCarCharger(newHouse.getEletricCarCharger());
+                    house.setWashingMachine(newHouse.getWashingMachine());
+                    house.setSeaSide(newHouse.getSeaSide());
                     return houseRepository.save(house);
                 })
                 .orElseGet(() -> {

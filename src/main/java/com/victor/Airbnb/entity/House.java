@@ -35,6 +35,13 @@ public class House {
     private Boolean tv;
     private Boolean pool;
     private Boolean jacuzzi;
+    private Boolean gym;
+    private Boolean cradle;
+    private Boolean kingBed;
+    private Boolean grill;
+    private Boolean eletricCarCharger;
+    private Boolean washingMachine;
+    private Boolean seaSide;
 
     @OneToOne(cascade = CascadeType.ALL)
     private Address address;
